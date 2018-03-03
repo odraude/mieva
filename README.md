@@ -1,2 +1,2 @@
 # mieva
-Moodle theme based on (Theme Photo) [https://github.com/damyon/moodle-theme_photo].
+Moodle theme based on [Theme Photo](https://github.com/damyon/moodle-theme_photo "GitHub Repo Theme Photo").

@@ -21,7 +21,7 @@
  * @Author:    Eduardo Camarillo
  * @Date:      2018-03-02 21:47:47
  * @Last Modified by:	Eduardo Camarillo
- * @Last Modified time:	2018-03-02 21:48:57
+ * @Last Modified time:	2018-03-02 22:06:18
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -36,7 +36,7 @@ $string['brandcolor'] = 'Brand colour';
 // The brand colour setting description.
 $string['brandcolor_desc'] = 'The accent colour.';
 // A description shown in the admin theme selector.
-$string['choosereadme'] = 'Theme mieva is a child theme of Boost. It adds the ability to upload background mievas.';
+$string['choosereadme'] = 'Theme mieva is a child theme of Boost. It adds the ability to upload background photos.';
 // Name of the settings pages.
 $string['configtitle'] = 'MiEVA settings';
 // Background image for dashboard page.
