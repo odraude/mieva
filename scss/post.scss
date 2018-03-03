@@ -1,0 +1,36 @@
+/*
+* @Author: Eduardo Camarillo
+* @Date:   2018-03-02 21:45:03
+* @Last Modified by:   Eduardo Camarillo
+* @Last Modified time: 2018-03-02 21:45:15
+*/
+
+// Post SCSS for the theme.
+
+body.pagelayout-login {
+    background-image: url([[pix:theme_photo|loginbackgroundimage]]);
+    background-size: cover;
+}
+body.pagelayout-frontpage {
+    background-image: url([[pix:theme_photo|frontpagebackgroundimage]]);
+    background-size: cover;
+}
+body.pagelayout-mydashboard {
+    background-image: url([[pix:theme_photo|dashboardbackgroundimage]]);
+    background-size: cover;
+}
+body.pagelayout-course,
+body.pagelayout-incourse {
+    background-image: url([[pix:theme_photo|incoursebackgroundimage]]);
+    background-size: cover;
+}
+body.pagelayout-embedded,
+body.pagelayout-popup,
+body.pagelayout-secure,
+body.pagelayout-print {
+    background-image: none;
+}
+body {
+    background-image: url([[pix:theme_photo|defaultbackgroundimage]]);
+    background-size: cover;
+}
