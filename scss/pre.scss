@@ -2,9 +2,57 @@
 * @Author: Eduardo Camarillo
 * @Date:   2018-03-02 21:45:35
 * @Last Modified by:   Eduardo Camarillo
-* @Last Modified time: 2018-03-02 21:45:38
+* @Last Modified time: 2018-03-06 03:22:02
 */
 
 // Pre SCSS for the theme.
 
+// Google Fonts
+@font-face {
+	font-family: 'Roboto';
+	src: url([[font:theme|Roboto-Regular.ttf]]) format('truetype');
+}
+
+// Font variables
+$font-family-roboto: 'Roboto', sans-serif;
+
 $card-bg: rgba(255, 255, 255, 0.98);
+
+// Footer
+$padding-footer: 15px 80px;
+
+.addr-footer, .policy-footer {
+    padding: $padding-footer;
+}
+
+.addr-footer, .policy-footer, .help-footer {
+	color: white;
+    div {
+        color: white;
+        a {
+            color: white;
+            &:visited, &:link, &:hover, &:active {
+                                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.addr-footer {
+    background-color:#9D9D9D;
+}
+
+.policy-footer {
+    background-color:#898989;
+}
+
+.help-footer {
+    background-color:#3B3B3B;
+}
+
+.footer {
+    margin-top: 50px;
+    .container {
+        border-top: 8px solid #7398E2;
+    }
+}

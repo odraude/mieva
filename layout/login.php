@@ -21,7 +21,7 @@
  * @Author:    Eduardo Camarillo
  * @Date:      2018-03-02 22:21:42
  * @Last Modified by:	Eduardo Camarillo
- * @Last Modified time:	2018-03-02 22:23:41
+ * @Last Modified time:	2018-03-05 23:17:31
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -32,7 +32,9 @@ $bodyattributes = $OUTPUT->body_attributes();
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
-    'bodyattributes' => $bodyattributes
+    'bodyattributes' => $bodyattributes,
+    'logo_sep' => $OUTPUT->image_url('LogoSep', 'theme'),
+    'logos_prepabier' => $OUTPUT->image_url('LogosPREPabier', 'theme')
 ];
 
 echo $OUTPUT->render_from_template('theme_mieva/login', $templatecontext);
