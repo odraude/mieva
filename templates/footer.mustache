@@ -1,0 +1,56 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template mieva/footer
+
+    Moodle footer template.
+
+    The purpose of this template is to render footer.
+
+    Classes required for JS:
+    * none
+
+    Data attributes required for JS:
+    * none
+
+    Context variables required for this template:
+    * footaddr Fotter address contents.
+    * footpolicy Footer policies contents.
+    * foothelp Footer help contents
+
+    Example context (json):
+    {
+        "col1content": "<div class='alert alert-info'>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor vulputate turpis, quis tempor arcu.</div>",
+        "col2content": "<div class='alert alert-success'>2. Vivamus ac orci in velit fringilla aliquam a a nisl. Cras luctus quam laoreet magna pulvinar aliquet.</div>"
+    }
+
+}}
+
+<footer id="page-footer" class="p-y-1 bg-inverse">
+    <div class="container">
+        <div id="course-footer">{{{ output.course_footer }}}</div>
+
+        {{# output.page_doc_link }}
+            <p class="helplink">{{{ output.page_doc_link }}}</p>
+        {{/ output.page_doc_link }}
+
+        {{{ output.login_info }}}
+        {{{ output.home_link }}}
+        {{{ output.standard_footer_html }}}
+        {{{ output.standard_end_of_body_html }}}
+    </div>
+</footer>
