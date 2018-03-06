@@ -2,7 +2,7 @@
 * @Author: Eduardo Camarillo
 * @Date:   2018-03-02 21:45:35
 * @Last Modified by:   Eduardo Camarillo
-* @Last Modified time: 2018-03-06 03:22:02
+* @Last Modified time: 2018-03-06 06:48:29
 */
 
 // Pre SCSS for the theme.
@@ -16,13 +16,21 @@
 // Font variables
 $font-family-roboto: 'Roboto', sans-serif;
 
+// Bg color variables
+.bg-mieva-navbar {
+    color: #000 !important;
+    background-color: #ebebeb !important;
+}
+
 $card-bg: rgba(255, 255, 255, 0.98);
 
 // Footer
 $padding-footer: 15px 80px;
 
-.addr-footer, .policy-footer {
-    padding: $padding-footer;
+@media (min-width: 1025px) {
+    .addr-footer, .policy-footer {
+        padding: $padding-footer;
+    }
 }
 
 .addr-footer, .policy-footer, .help-footer {

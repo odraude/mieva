@@ -19,23 +19,13 @@
  *
  * @package    theme_mieva
  * @Author:    Eduardo Camarillo
- * @Date:      2018-03-02 22:21:42
+ * @Date:      2018-03-06 05:28:47
  * @Last Modified by:	Eduardo Camarillo
- * @Last Modified time:	2018-03-06 05:42:53
+ * @Last Modified time:	2018-03-06 05:29:37
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+// This line protects the file from being accessed by a URL directly.
 defined('MOODLE_INTERNAL') || die();
 
-$bodyattributes = $OUTPUT->body_attributes();
-
-$templatecontext = [
-    'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
-    'fullsitename' => format_string($SITE->fullname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
-    'output' => $OUTPUT,
-    'bodyattributes' => $bodyattributes,
-    'logo_sep' => $OUTPUT->image_url('LogoSep', 'theme'),
-    'logos_prepabier' => $OUTPUT->image_url('LogosPREPabier', 'theme')
-];
-
-echo $OUTPUT->render_from_template('theme_mieva/login', $templatecontext);
+$string['sign_in'] = 'Inicio de sesión';

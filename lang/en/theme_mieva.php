@@ -21,7 +21,7 @@
  * @Author:    Eduardo Camarillo
  * @Date:      2018-03-02 21:47:47
  * @Last Modified by:	Eduardo Camarillo
- * @Last Modified time:	2018-03-02 22:06:18
+ * @Last Modified time:	2018-03-06 05:27:44
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -81,3 +81,4 @@ $string['rawscsspre'] = 'Raw initial SCSS';
 $string['rawscsspre_desc'] = 'In this field you can provide initialising SCSS code, it will be injected before everything else. Most of the time you will use this setting to define variables.';
 // We need to include a lang string for each block region.
 $string['region-side-pre'] = 'Right';
+$string['sign_in'] = 'Sign in';
