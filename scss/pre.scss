@@ -2,7 +2,7 @@
 * @Author: Eduardo Camarillo
 * @Date:   2018-03-02 21:45:35
 * @Last Modified by:   Eduardo Camarillo
-* @Last Modified time: 2018-03-07 00:11:19
+* @Last Modified time: 2018-03-07 00:48:08
 */
 
 // Pre SCSS for the theme.
@@ -60,9 +60,7 @@ $padding-footer: 15px 80px;
 
 .footer {
     margin-top: 50px;
-    .container {
-        border-top: 8px solid #7398E2;
-    }
+    border-top: 8px solid #7398E2;
 }
 
 // Navbar
