@@ -2,7 +2,7 @@
 * @Author: Eduardo Camarillo
 * @Date:   2018-03-02 21:45:03
 * @Last Modified by:   Eduardo Camarillo
-* @Last Modified time: 2018-03-06 04:59:25
+* @Last Modified time: 2018-03-07 00:24:40
 */
 
 // Post SCSS for the theme.
@@ -40,4 +40,10 @@ body {
 // Overwrite bootstrap breadcrumb separator
 .breadcrumb-item + .breadcrumb-item::before {
     content: ">";
+}
+
+// Overwrite bootstrap border radius navbar
+.navbar {
+    max-height: 75px !important;
+    border-radius: 0 !important;
 }

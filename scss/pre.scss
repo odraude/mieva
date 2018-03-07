@@ -2,7 +2,7 @@
 * @Author: Eduardo Camarillo
 * @Date:   2018-03-02 21:45:35
 * @Last Modified by:   Eduardo Camarillo
-* @Last Modified time: 2018-03-06 06:48:29
+* @Last Modified time: 2018-03-07 00:11:19
 */
 
 // Pre SCSS for the theme.
@@ -63,4 +63,14 @@ $padding-footer: 15px 80px;
     .container {
         border-top: 8px solid #7398E2;
     }
+}
+
+// Navbar
+.navbar-moodle {
+    color: #2C4F9A !important;
+    background-color: #EBEBEB !important;
+}
+
+.navbar-sep {
+    background-color: #3B3B3B !important;
 }
