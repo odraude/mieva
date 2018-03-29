@@ -41,71 +41,72 @@
 <body {{{ bodyattributes }}}>
 
 <div id="">
+	<div class="topnav navbar-sep" id="myTopnav">
+	    <div class="container">
+	        <a class="brand" href="#">
+	        	<img src="{{{logo_sep}}}">
+	        </a>
+	        
+	        <div class="float-right">
+		        <span>
+		            <a class="underline" href="#news"><i class="fa fa-sign-in" aria-hidden="true"></i> Solicita tu cuenta institucional</a>
+		        </span>
+		        <span class="hidden-sm-down">
+		            <a>|</a>
+		        </span>
+		        <span>
+		            <a class="underline" href="#contact">Recuperar contraseña</a>
+		        </span>
+	        </div>
 
-<div class="topnav navbar-sep" id="myTopnav">
-    <div class="container">
-        
-            <a class="brand" href="#">
-                <img src="{{{logo_sep}}}">
-            </a>
-        
-        <span class="float-right">
-            <a class="float-right underline" href="#contact">Recuperar contraseña</a>
-        </span>
-        <span class="float-right hidden-sm-down">
-            <a>|</a>
-        </span>
-        <span class="float-right">
-            <a class="float-right underline" href="#news"><i class="fa fa-sign-in" aria-hidden="true"></i> Solicita tu cuenta institucional</a>
-        </span>
-        <a href="javascript:void(0);" style="font-size:16px;" class="icon" onclick="toggleFunction(this)"><i class="fa fa-bars" aria-hidden="true"></i></a>
-    </div>
-</div>
-<div class="topnav navbar-moodle" id="myTopnav2">
-    <div class="container">
-        
-            <a class="brand" href="#">
-                <img src="{{{logos_prepabier}}}">
-            </a>
-        
-
-        <span class="float-right">
-            <div class="dropdowntn">
-                <button class="dropbtn"><i class="fa fa-angle-down"></i>
-                    Contacto
-                </button>
-                <div class="dropdowntn-content">
-                  <a href="#">Link 1</a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
-                </div>
-            </div>
-        </span>
-        <span class="float-right">
-            <a href="#home">Asignaturas</a>
-        </span>
-        <span class="float-right">
-            <a href="#news">Módulos de aprendizaje</a>
-        </span>
-        <span class="float-right">
-            <div class="dropdowntn">
-                <button class="dropbtn"><i class="fa fa-angle-down"></i>
-                    Preparatoria Abierta
-                </button>
-                <div class="dropdowntn-content">
-                  <a href="#">Link 1</a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
-                </div>
-            </div>
-        </span>
-        <span class="float-right">
-            <a href="#contact">Inicio</a>
-        </span>
-        
-        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="toggleFunction(this)"><i class="fa fa-bars" aria-hidden="true"></i></a>
-    </div>
-</div>
+	        <a href="javascript:void(0);" style="font-size:16px;" class="icon" onclick="toggleFunction(this)"><i class="fa fa-bars" aria-hidden="true"></i></a>
+	    </div>
+	</div>
+	<div class="topnav navbar-moodle" id="myTopnav2">
+	    <div class="container">
+			<a class="brand" href="#">
+	        	<img src="{{{logos_prepabier}}}">
+	        </a>
+	        
+	        <div class="float-right">
+		        <span>
+		            <a href="#contact">Inicio</a>
+		        </span>
+		        <span>
+		            <div class="dropdowntn">
+		                <button class="dropbtn"><i class="fa fa-angle-down"></i>
+		                    Preparatoria Abierta
+		                </button>
+		                <div class="dropdowntn-content">
+		                  <a href="#">Link 1</a>
+		                  <a href="#">Link 2</a>
+		                  <a href="#">Link 3</a>
+		                </div>
+		            </div>
+		        </span>
+		        <span>
+		            <a href="#news">Módulos de aprendizaje</a>
+		        </span>
+		        <span>
+		            <a href="#home">Asignaturas</a>
+		        </span>
+		        <span>
+		            <div class="dropdowntn">
+		                <button class="dropbtn"><i class="fa fa-angle-down"></i>
+		                    Contacto
+		                </button>
+		                <div class="dropdowntn-content">
+		                  <a href="#">Link 1</a>
+		                  <a href="#">Link 2</a>
+		                  <a href="#">Link 3</a>
+		                </div>
+		            </div>
+		        </span>
+	        </div>
+	        
+	        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="toggleFunction(this)"><i class="fa fa-bars" aria-hidden="true"></i></a>
+	    </div>
+	</div>
 
     {{{ output.standard_top_of_body_html }}}
 
