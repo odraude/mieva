@@ -1,8 +1,8 @@
 /*
 * @Author: Eduardo Camarillo
 * @Date:   2018-03-02 21:45:35
-* @Last Modified by:   Eduardo Camarillo
-* @Last Modified time: 2018-03-07 00:48:08
+* @Last Modified by:   odraude
+* @Last Modified time: 2018-03-28 15:14:35
 */
 
 // Pre SCSS for the theme.
@@ -70,5 +70,6 @@ $padding-footer: 15px 80px;
 }
 
 .navbar-sep {
+    color: white !important;
     background-color: #3B3B3B !important;
 }

@@ -20,8 +20,8 @@
  * @package    theme_mieva
  * @Author:    Eduardo Camarillo
  * @Date:      2018-03-02 21:38:55
- * @Last Modified by:	Eduardo Camarillo
- * @Last Modified time:	2018-03-02 21:41:50
+ * @Last Modified by:	odraude
+ * @Last Modified time:	2018-03-22 01:00:37
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -54,6 +54,7 @@ function theme_mieva_get_main_scss_content($theme) {
     }
     // Pre CSS - this is loaded AFTER any prescss from the setting but before the main scss.
     $pre = file_get_contents($CFG->dirroot . '/theme/mieva/scss/pre.scss');
+    $pre .= file_get_contents($CFG->dirroot . '/theme/mieva/scss/topnav.scss');
     // Post CSS - this is loaded AFTER the main scss but before the extra scss from the setting.
     $post = file_get_contents($CFG->dirroot . '/theme/mieva/scss/post.scss');
     // Combine them together.
