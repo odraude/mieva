@@ -15,18 +15,37 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template theme_mieva/login
+    @template theme_mieva/columns2
 
-    Login page template
+    Admin time setting template.
+
+    Boost 2 column layout template.
+
+    Context variables required for this template:
+    * sitename - The name of the site
+    * output - The core renderer for the page
+    * bodyattributes - attributes for the body tag as a string of html attributes
+    * sidepreblocks - HTML for the blocks
+    * hasblocks - true if there are blocks on this page
+    * navdraweropen - true if the nav drawer should be open on page load
+    * regionmainsettingsmenu - HTML for the region main settings menu
+    * hasregionmainsettingsmenu - There is a region main settings menu on this page.
 
     Example context (json):
     {
+        "sitename": "Moodle",
         "output": {
             "doctype": "<!DOCTYPE html>",
-            "page_title": "Login page",
+            "page_title": "Test page",
             "favicon": "favicon.ico",
-            "main_content": "<h1>Headers keep HTML validators happy</h1>"
-        }
+            "main_content": "<h1>Headings make html validators happier</h1>"
+         },
+        "bodyattributes":"",
+        "sidepreblocks": "<h2>Blocks html goes here</h2>",
+        "hasblocks":true,
+        "navdraweropen":true,
+        "regionmainsettingsmenu": "",
+        "hasregionmainsettingsmenu": false
     }
 }}
 {{{ output.doctype }}}
@@ -41,108 +60,41 @@
 <body {{{ bodyattributes }}}>
 
 <div id="page-wrapper">
-	<div class="topnav navbar-sep" id="myTopnav">
-	    <div class="container">
-	        <a class="brand" href="#">
-	        	<img src="{{{logo_sep}}}">
-	        </a>
-	        
-	        <div class="float-right">
-		        <span>
-		            <a class="underline" href="#news"><i class="fa fa-sign-in" aria-hidden="true"></i> Solicita tu cuenta institucional</a>
-		        </span>
-		        <span class="hidden-sm-down">
-		            <a>|</a>
-		        </span>
-		        <span>
-		            <a class="underline" href="#contact">Recuperar contraseña</a>
-		        </span>
-	        </div>
-
-	        <a href="javascript:void(0);" style="font-size:16px;" class="icon" onclick="toggleFunction(this)"><i class="fa fa-bars" aria-hidden="true"></i></a>
-	    </div>
-	</div>
-	<div class="topnav navbar-moodle" id="myTopnav2">
-	    <div class="container">
-			<a class="brand" href="#">
-	        	<img src="{{{logos_prepabier}}}">
-	        </a>
-	        
-	        <div class="float-right">
-		        <span>
-		            <a href="#contact">Inicio</a>
-		        </span>
-		        <span>
-		            <div class="dropdowntn">
-		                <button class="dropbtn"><i class="fa fa-angle-down"></i>
-		                    Preparatoria Abierta
-		                </button>
-		                <div class="dropdowntn-content">
-		                  <a href="#">Link 1</a>
-		                  <a href="#">Link 2</a>
-		                  <a href="#">Link 3</a>
-		                </div>
-		            </div>
-		        </span>
-		        <span>
-		            <a href="#news">Módulos de aprendizaje</a>
-		        </span>
-		        <span>
-		            <a href="#home">Asignaturas</a>
-		        </span>
-		        <span>
-		            <div class="dropdowntn">
-		                <button class="dropbtn"><i class="fa fa-angle-down"></i>
-		                    Contacto
-		                </button>
-		                <div class="dropdowntn-content">
-		                  <a href="#">Link 1</a>
-		                  <a href="#">Link 2</a>
-		                  <a href="#">Link 3</a>
-		                </div>
-		            </div>
-		        </span>
-	        </div>
-	        
-	        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="toggleFunction(this)"><i class="fa fa-bars" aria-hidden="true"></i></a>
-	    </div>
-	</div>
 
     {{{ output.standard_top_of_body_html }}}
 
-    <div id="page" class="container-fluid m-t-1">
+    {{>theme_boost/header}}
 
-        <div class="container">
-            <!-- Breadcrumbs -->
-            <div class="row">
-                <div class="col-md-12">
-                    <nav class="breadcrumb" aria-label="breadcrumb">
-                        <a class="breadcrumb-item" href="#">Inicio</a>
-                        <a class="breadcrumb-item" href="#">Módulos de aprendizaje</a>
-                        <span class="breadcrumb-item active" aria-current="page">Inicio de sesión</span>
-                    </nav>
-                </div>   
-            </div>
-            
-            <!-- Header -->
-            <div class="row">
-                <div class="col-md-6 push-md-3 text-md-center">
-                    <h1>{{{fullsitename}}}</h1>
-                    <hr>
-                </div>
-            </div>
-        </div>
+    <div id="page" class="container">
+        {{{ output.full_header }}}
 
         <div id="page-content" class="row">
-            <div id="region-main-box">
-                <section id="region-main" class="col-xs-12">
+            <div id="region-main-box" class="col-xs-12">
+                {{#hasregionmainsettingsmenu}}
+                <div id="region-main-settings-menu" class="hidden-print {{#hasblocks}}has-blocks{{/hasblocks}}">
+                    <div> {{{ output.region_main_settings_menu }}} </div>
+                </div>
+                {{/hasregionmainsettingsmenu}}
+                <section id="region-main" {{#hasblocks}}class="has-blocks"{{/hasblocks}}>
+                    <div class="card card-block">
+                    {{#hasregionmainsettingsmenu}}
+                        <div class="region_main_settings_menu_proxy"></div>
+                    {{/hasregionmainsettingsmenu}}
                     {{{ output.course_content_header }}}
                     {{{ output.main_content }}}
+                    {{{ output.activity_navigation }}}
                     {{{ output.course_content_footer }}}
+                    </div>
                 </section>
+                {{#hasblocks}}
+                <section data-region="blocks-column" class="hidden-print">
+                    {{{ sidepreblocks }}}
+                </section>
+                {{/hasblocks}}
             </div>
         </div>
     </div>
+    {{> theme_boost/nav-drawer }}
 </div>
 
 <footer class="footer">
@@ -177,6 +129,18 @@
                 <div class="col-md-12 text-md-center">
                     <p><a href="#">Mapa de sitio</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="#">Políticas de privacidad</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="#">Créditos</a></p>
                 </div>
+                <div class="col-sm-12 text-md-center">
+                    <nav class="nav navbar-nav hidden-lg-up">
+                        {{# output.custom_menu_flat }}
+                            <ul class="list-unstyled p-t-1">
+                                {{> theme_boost/custom_menu_footer }}
+                            </ul>
+                        {{/ output.custom_menu_flat }}
+                    </nav>
+                    {{{ output.standard_footer_html }}}
+                    <div id="course-footer">{{{ output.course_footer }}}</div>
+                    <div class="tool_usertours-resettourcontainer"></div>
+                </div>
             </div>
         </div>
 
@@ -196,12 +160,12 @@
     </div>
 </footer>
 
-<script type="text/javascript">function toggleFunction(e) { var x = e.parentNode.parentNode; if (! x.className.includes("responsive")){ x.className += " responsive"; } else { res = x.className.split(" "); x.className = res[0] + " " + res[1]; } }</script>
-
+{{{ output.standard_end_of_body_html }}}
 </body>
 </html>
 {{#js}}
 require(['theme_boost/loader']);
-require(['theme_mieva/loader']);
-require(['theme_mieva/topnav']);
+require(['theme_boost/drawer'], function(mod) {
+    mod.init();
+});
 {{/js}}
