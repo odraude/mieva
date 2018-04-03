@@ -177,6 +177,18 @@
                 <div class="col-md-12 text-md-center">
                     <p><a href="#">Mapa de sitio</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="#">Políticas de privacidad</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="#">Créditos</a></p>
                 </div>
+                <div class="col-sm-12 text-md-center">
+                    <nav class="nav navbar-nav hidden-lg-up">
+                        {{# output.custom_menu_flat }}
+                            <ul class="list-unstyled p-t-1">
+                                {{> theme_boost/custom_menu_footer }}
+                            </ul>
+                        {{/ output.custom_menu_flat }}
+                    </nav>
+                    {{{! output.standard_footer_html }}}
+                    <div id="course-footer">{{{ output.course_footer }}}</div>
+                    <div class="tool_usertours-resettourcontainer"></div>
+                </div>
             </div>
         </div>
 
