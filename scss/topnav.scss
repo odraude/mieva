@@ -2,12 +2,17 @@
 * @Author: odraude
 * @Date:   2018-03-22 00:53:02
 * @Last Modified by:   odraude
-* @Last Modified time: 2018-03-29 00:43:22
+* @Last Modified time: 2018-04-04 21:57:03
 */
 
 .topnav {
   overflow: hidden;
   background-color: #333;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: 1030;
 }
 
 .topnav a {
@@ -52,12 +57,12 @@
 
 .dropdowntn-content {
     display: none;
-    position: absolute;
+    position: fixed;
     color: inherit;
-    background-color: #f9f9f9;
+    background-color: inherit;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    #box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1030;
 }
 
 .dropdowntn-content a {
@@ -83,7 +88,7 @@
 
 
 .dropdowntn-content a:hover {
-    background-color: #ddd;
+    background-color: inherit;
 }
 
 .dropdowntn:hover .dropdowntn-content {
@@ -104,7 +109,7 @@
 }
 
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {z-index: 1031;}
   .topnav.responsive .icon {
     position: absolute;
     right: 0;

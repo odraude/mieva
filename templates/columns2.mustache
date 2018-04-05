@@ -63,7 +63,8 @@
 
     {{{ output.standard_top_of_body_html }}}
 
-    {{>theme_boost/header}}
+    {{>theme_mieva/headersep}}
+    {{>theme_mieva/header}}
 
     <div id="page" class="container">
         {{{ output.full_header }}}
@@ -96,70 +97,8 @@
     </div>
     {{> theme_boost/nav-drawer }}
 </div>
-
-<footer class="footer">
-    <div class="container-fluid">
-        <div class="addr-footer row text-xs-center">
-            <div class="container">
-                <div class="col-md-12">
-                    <p class="text-md-center">Subsecretaría de Educación Media Superior, Dirección General del Bachillerato</p>
-                    <p class="text-md-center">Dirección de Sistemas Abiertos, Preparatoria Abierta</p>
-                    <br>
-                </div>
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-md-2 text-md-right"><i class="fa fa-map-marker fa-4x" aria-hidden="true"></i></div>
-                        <div class="col-md-10 text-md-left"><p>Eje 8 Sur José María Rico 221, Delegación Benito Juárez, Colonia Del Valle, 03100, Ciudad de México, México.</p></div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-md-3 text-md-right"><i class="fa fa-envelope-o fa-4x" aria-hidden="true"></i></div>
-                        <div class="col-md-9 text-md-left"><p>Correo electrónico: <br><a href="mailto:admin.prepa@dgb.email?Subject=Contacto Mi EVA">evaprepaabierta@dgb.sems.gob.mx</a></p></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="policy-footer row text-xs-center">
-            <div class="container">
-                <div class="col-md-12">
-                    <p class="text-md-center">El acceso a determinados contenidos es exclusivo para los estudiantes de Preparatoria Abierta.</p>
-                </div>
-                <div class="col-md-12 text-md-center">
-                    <p><a href="#">Mapa de sitio</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="#">Políticas de privacidad</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="#">Créditos</a></p>
-                </div>
-                <div class="col-sm-12 text-md-center">
-                    <nav class="nav navbar-nav hidden-lg-up">
-                        {{# output.custom_menu_flat }}
-                            <ul class="list-unstyled p-t-1">
-                                {{> theme_boost/custom_menu_footer }}
-                            </ul>
-                        {{/ output.custom_menu_flat }}
-                    </nav>
-                    {{{! output.standard_footer_html }}}
-                    <div id="course-footer">{{{ output.course_footer }}}</div>
-                    <div class="tool_usertours-resettourcontainer"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="help-footer row text-xs-center">
-            <div class="container">
-                <div class="col-md-4 text-md-left">
-                    <img src="{{{logo_sep}}}">
-                </div>
-                <div class="col-md-8">
-                    <p class="text-md-right">
-                        <br>
-                        <a href="#">Preguntas frecuentes</a> &nbsp;&nbsp;&nbsp; <a href="#">Ayuda</a> <i class="fa fa-question-circle" aria-hidden="true"></i>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-
+{{>theme_mieva/footer}}
+<script type="text/javascript">function toggleFunction(e) { var x = e.parentNode.parentNode; if (! x.className.includes("responsive")){ x.className += " responsive"; } else { res = x.className.split(" "); x.className = res[0] + " " + res[1]; } }</script>
 {{{ output.standard_end_of_body_html }}}
 </body>
 </html>

@@ -2,7 +2,7 @@
 * @Author: Eduardo Camarillo
 * @Date:   2018-03-02 21:45:35
 * @Last Modified by:   odraude
-* @Last Modified time: 2018-03-29 19:17:52
+* @Last Modified time: 2018-04-04 21:49:24
 */
 
 // Pre SCSS for the theme.
@@ -67,9 +67,20 @@ $padding-footer: 15px 80px;
 .navbar-moodle {
     color: #2C4F9A !important;
     background-color: #EBEBEB !important;
+    min-height: 54px;
+    top: 54px !important;
 }
 
 .navbar-sep {
     color: white !important;
     background-color: #3B3B3B !important;
+    min-height: 54px;
+}
+
+.navbar-sep div div span .dropdowntn .dropdowntn-content {
+    background-color: #3b3b3b;
+}
+
+.navbar-moodle div div span .dropdowntn .dropdowntn-content {
+    background-color: #ebebeb;
 }

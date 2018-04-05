@@ -1,8 +1,8 @@
 /*
 * @Author: Eduardo Camarillo
 * @Date:   2018-03-02 21:45:03
-* @Last Modified by:   Eduardo Camarillo
-* @Last Modified time: 2018-03-07 00:24:40
+* @Last Modified by:   odraude
+* @Last Modified time: 2018-04-04 22:02:00
 */
 
 // Post SCSS for the theme.
@@ -46,4 +46,15 @@ body {
 .navbar {
     max-height: 75px !important;
     border-radius: 0 !important;
+}
+
+#page {
+    margin-top: 108px !important;
+}
+
+// nav drawer
+[data-region="drawer"] {
+    top: 108px;
+    height: calc(100% - 108px);
+    background-color: #ebebeb;
 }
