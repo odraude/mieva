@@ -52,8 +52,7 @@ $templatecontext = [
     'navdraweropen' => $navdraweropen,
     'regionmainsettingsmenu' => $regionmainsettingsmenu,
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
-    'logo_sep' => $OUTPUT->image_url('LogoSep', 'theme'),
-    'logos_prepabier' => $OUTPUT->image_url('LogosPREPabier', 'theme')
+    'logo_sep' => $OUTPUT->image_url('LogoSep', 'theme')
 ];
 
 $templatecontext['flatnavigation'] = $PAGE->flatnav;
