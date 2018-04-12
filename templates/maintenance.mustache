@@ -15,18 +15,21 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template theme_mieva/login
+    @template theme_boost/maintenance
 
-    Login page template
+    Boost maintenance layout template.
+
+    Context variables required for this template:
+    * output - The core renderer for the page
 
     Example context (json):
     {
         "output": {
             "doctype": "<!DOCTYPE html>",
-            "page_title": "Login page",
+            "page_title": "Test page",
             "favicon": "favicon.ico",
-            "main_content": "<h1>Headers keep HTML validators happy</h1>"
-        }
+            "main_content": "<h1>Headings make html validators happier</h1>"
+         }
     }
 }}
 {{{ output.doctype }}}
@@ -38,7 +41,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body {{{ bodyattributes }}}>
+<body {{{ output.body_attributes }}}>
 
 <div id="page-wrapper">
 
@@ -47,38 +50,21 @@
     {{>theme_mieva/headersep_external}}
     {{>theme_mieva/headerpa}}
 
-    <div id="page" class="container-fluid m-t-1">
+    <br />
+    <div id="page" class="container card card-block">
 
-        <div class="container">
-            <!-- Breadcrumbs -->
-            <div class="row">
-                <div class="col-md-12">
-                    <nav class="breadcrumb" aria-label="breadcrumb">
-                        <a class="breadcrumb-item" href="#">Inicio</a>
-                        <a class="breadcrumb-item" href="#">Módulos de aprendizaje</a>
-                        <span class="breadcrumb-item active" aria-current="page">Inicio de sesión</span>
-                    </nav>
-                </div>   
-            </div>
-            
-            <!-- Header -->
-            <div class="row">
-                <div class="col-md-6 push-md-3 text-md-center">
-                    <h1>{{{fullsitename}}}</h1>
-                    <hr>
-                </div>
+        <div class="row">
+            <div class="col-xs-12 p-y-1">
+                {{{ output.page_heading }}}
             </div>
         </div>
 
         <div id="page-content" class="row">
-            <div id="region-main-box">
-                <section id="region-main" class="col-xs-12">
-                    {{{ output.course_content_header }}}
-                    {{{ output.main_content }}}
-                    {{{ output.course_content_footer }}}
-                </section>
-            </div>
+            <section id="region-main" class="col-xs-12">
+                {{{ output.main_content }}}
+            </section>
         </div>
+
     </div>
 </div>
 
