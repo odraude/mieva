@@ -2,7 +2,7 @@
 * @Author: Eduardo Camarillo
 * @Date:   2018-03-02 21:45:03
 * @Last Modified by:   odraude
-* @Last Modified time: 2018-04-04 22:02:00
+* @Last Modified time: 2018-04-11 23:53:06
 */
 
 // Post SCSS for the theme.
@@ -57,4 +57,8 @@ body {
     top: 108px;
     height: calc(100% - 108px);
     background-color: #ebebeb;
+}
+
+.page-context-header .page-header-image, .page-context-header .page-header-headings {
+    float: none;
 }
