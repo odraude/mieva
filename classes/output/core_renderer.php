@@ -90,19 +90,15 @@ class core_renderer extends \core_renderer {
             $html .= html_writer::end_div();
             $html .= html_writer::end_div();
 
-            $html .= html_writer::start_div('container');
             $html .= html_writer::start_div('row');
             $html .= html_writer::start_div('col-md-12 bg-mieva-navbar');
             $html .= $this->context_header(null, 2);
             $html .= html_writer::end_div();
             $html .= html_writer::end_div();
-            $html .= html_writer::end_div();
 
             $pageheadingbutton = $this->page_heading_button();
-            $html .= html_writer::start_div('container');
             $html .= html_writer::start_div('row');
             $html .= html_writer::div($pageheadingbutton, 'breadcrumb-button pull-xs-right');
-            $html .= html_writer::end_div();
             $html .= html_writer::end_div();
 
             $html .= html_writer::start_tag('br');
