@@ -92,10 +92,10 @@
 }}
 
 
-<div class="m-y-3 hidden-sm-down"></div>
+<div class="m-y-2 hidden-sm-down"></div>
 <div class="container">
     <div class="row">
-        <div class="col-md-12 text-md-center bg-mieva-navbar">
+        <div class="col-md-12 bg-mieva-navbar">
             <h2 class="m-y-1">Inicio de sesión</h2>
         </div>
     </div>
@@ -122,11 +122,11 @@
         <!-- Students -->
         <div class="col-md-6 border-right">
             <div class="row">
-                <div class="col-md-12 text-md-center m-y-3">
+                <div class="col-md-12 m-y-3 paragraph-title">
                     <h3>Estudiantes de Preparatoria Abierta</h3>
                 </div>
-                <div class="col-md-12 text-md-justify">
-                    <p>Utiliza tu <strong>cuenta institucional</strong> de Google para
+                <div class="col-md-12 paragraph">
+                    <p>Utiliza tu <span class="highlight-green">cuenta institucional</span> de Google para
                     consultar las actividades y recursos educativos.</p>
                 </div>
             </div>
@@ -134,7 +134,7 @@
             <div class="row">
                 <div class="col-md-8 push-md-2">
                     {{#hasidentityproviders}}
-                        <h6 class="m-t-2">{{#str}} potentialidps, auth {{/str}}</h6>
+                        <h6 class="m-t-2 paragraph">{{#str}} potentialidps, auth {{/str}}</h6>
                         <div class="potentialidplist" class="m-t-1">
                             {{#identityproviders}}
                                 <div class="potentialidp">
@@ -152,14 +152,14 @@
             </div>
             <!-- Institutional account help -->
             <div class="row">
-                <div class="col-md-8 push-md-2 text-md-center">
-                    <p>¿Aún no tienes tu cuenta institucional?</p>
-                    <p><a class="btn btn-info" target="_blank" href="#">Solicitala</a></p>
+                <div class="col-md-8 push-md-2 m-t-3 paragraph-bold">
+                    <p>¿Aún no tienes tu <span class="highlight-green">cuenta institucional</span>?</p>
+                    <p><a class="btn btn-success btn-block m-t-2 paragraph-bold" target="_blank" href="#">Solicítala</a></p>
                 </div>
-                <div class="col-md-6 text-md-center">
+                <div class="col-md-8 push-md-2 m-t-2">
                     <p><a href="#">Recuperar Contraseña</a></p>
                 </div>
-                <div class="col-md-6 text-md-center">
+                <div class="col-md-4 m-t-2">
                     <p><a href="#">Ayuda</a></p>
                 </div>
             </div>
@@ -168,10 +168,10 @@
         <!-- Management personal -->
         <div class="col-md-6 border-left">
             <div class="row">
-                <div class="col-md-12 text-md-center m-y-3">
+                <div class="col-md-8 push-md-2 m-y-3 paragraph-title">
                     <h3>Personal administrativo</h3>
                 </div>
-                <div class="col-md-12 text-md-justify">
+                <div class="col-md-8 push-md-2 paragraph">
                     <p>Ingresa con tus datos de usuario.</p>
                 </div>
             </div>
@@ -181,7 +181,7 @@
                         <input id="anchor" type="hidden" name="anchor" value="">
                         <script>document.getElementById('anchor').value = location.hash;</script>
 
-                        <label for="username" class="">
+                        <label for="username" class="paragraph-light">
                             {{^canloginbyemail}}
                                 {{#str}} username {{/str}}
                             {{/canloginbyemail}}
@@ -193,7 +193,7 @@
                         class="form-control"
                         value="{{username}}"
                         placeholder={{#quote}}{{^canloginbyemail}}{{#str}}username{{/str}}{{/canloginbyemail}}{{#canloginbyemail}}{{#str}}usernameemail{{/str}}{{/canloginbyemail}}{{/quote}}>
-                        <label for="password" class="">{{#str}} password {{/str}}</label>
+                        <label for="password" class="paragraph-light">{{#str}} password {{/str}}</label>
                         <input type="password" name="password" id="password" value=""
                             class="form-control"
                             placeholder={{#quote}}{{#str}}password{{/str}}{{/quote}}>
@@ -205,10 +205,10 @@
                             </div>
                         {{/rememberusername}}
 
-                        <button type="submit" class="btn btn-primary btn-block m-t-1" id="loginbtn">{{#str}}login{{/str}}</button>
+                        <button type="submit" class="btn btn-primary btn-block m-t-1 paragraph-bold" id="loginbtn">{{#str}}login{{/str}}</button>
                     </form>
 
-                    <div class="forgetpass m-t-1">
+                    <div class="forgetpass m-t-3">
                         <p><a href="{{forgotpasswordurl}}">{{#str}}forgotten{{/str}}</a></p>
                     </div>
                 </div>
