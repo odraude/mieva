@@ -138,7 +138,7 @@
                         <div class="potentialidplist" class="m-t-1">
                             {{#identityproviders}}
                                 <div class="potentialidp">
-                                    <a href="{{url}}" title={{#quote}}{{name}}{{/quote}} class="btn btn-secondary btn-block">
+                                    <a href="{{url}}" title={{#quote}}{{name}}{{/quote}} class="btn btn-secondary btn-block paragraph-bold">
                                         {{#iconurl}}
                                             <img src="{{iconurl}}" alt="" width="24" height="24"/>
                                         {{/iconurl}}
@@ -154,7 +154,7 @@
             <div class="row">
                 <div class="col-md-8 push-md-2 m-t-3 paragraph-bold">
                     <p>¿Aún no tienes tu <span class="highlight-green">cuenta institucional</span>?</p>
-                    <p><a class="btn btn-success btn-block m-t-2 paragraph-bold" target="_blank" href="#">Solicítala</a></p>
+                    <p><a class="btn btn-success bg-green btn-block m-t-2 paragraph-bold" target="_blank" href="#">Solicítala</a></p>
                 </div>
                 <div class="col-md-8 push-md-2 m-t-2">
                     <p><a href="#">Recuperar Contraseña</a></p>
@@ -172,7 +172,7 @@
                     <h3>Personal administrativo</h3>
                 </div>
                 <div class="col-md-8 push-md-2 paragraph">
-                    <p>Ingresa con tus datos de usuario.</p>
+                    <p><span class="highlight-orange">Ingresa</span> con tus datos de usuario.</p>
                 </div>
             </div>
             <div class="row">
@@ -205,7 +205,7 @@
                             </div>
                         {{/rememberusername}}
 
-                        <button type="submit" class="btn btn-primary btn-block m-t-1 paragraph-bold" id="loginbtn">{{#str}}login{{/str}}</button>
+                        <button type="submit" class="btn btn-danger bg-orange btn-block m-t-1 paragraph-bold" id="loginbtn">{{#str}}login{{/str}}</button>
                     </form>
 
                     <div class="forgetpass m-t-3">

@@ -2,7 +2,7 @@
 * @Author: Eduardo Camarillo
 * @Date:   2018-03-02 21:45:03
 * @Last Modified by:   odraude
-* @Last Modified time: 2018-04-17 16:33:27
+* @Last Modified time: 2018-04-17 17:08:40
 */
 
 // Post SCSS for the theme.
@@ -54,11 +54,17 @@ body {
 }
 .highlight-green {
     font-family: $font-family-roboto-bold;
-    color: $brand-success;
+    color: $text-green;
 }
 .highlight-orange {
     font-family: $font-family-roboto-bold;
-    color: $brand-danger;
+    color: $text-orange;
+}
+.bg-green {
+    background-color: $text-green;
+}
+.bg-orange {
+    background-color: $text-orange;
 }
 
 // Overwrite bootstrap breadcrumb separator
