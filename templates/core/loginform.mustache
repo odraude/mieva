@@ -126,18 +126,18 @@
                     <h3>Estudiantes de Preparatoria Abierta</h3>
                 </div>
                 <div class="col-md-12 paragraph">
-                    <p>Utiliza tu <span class="highlight-orange">cuenta institucional</span> de Google para
-                    consultar las actividades y recursos educativos.</p>
+                    <p>Ingresa con tu <span class="highlight-orange">cuenta institucional</span> de 
+                        <span class="highlight-orange">Google</span> para consultar las actividades
+                    y recursos educativos.</p>
                 </div>
             </div>
             <!-- IdP -->
             <div class="row">
                 <div class="col-md-8 push-md-2">
                     {{#hasidentityproviders}}
-                        <h6 class="m-t-2 paragraph">{{#str}} potentialidps, auth {{/str}}</h6>
                         <div class="potentialidplist" class="m-t-1">
                             {{#identityproviders}}
-                                <div class="potentialidp">
+                                <div class="potentialidp m-t-2">
                                     <a href="{{url}}" title={{#quote}}{{name}}{{/quote}} class="btn btn-orange btn-block paragraph-bold">
                                         {{#iconurl}}
                                             <img src="{{iconurl}}" alt="" width="24" height="24"/>
@@ -193,7 +193,7 @@
                         class="form-control"
                         value="{{username}}"
                         placeholder={{#quote}}{{^canloginbyemail}}{{#str}}username{{/str}}{{/canloginbyemail}}{{#canloginbyemail}}{{#str}}usernameemail{{/str}}{{/canloginbyemail}}{{/quote}}>
-                        <label for="password" class="paragraph-light">{{#str}} password {{/str}}</label>
+                        <label for="password" class="paragraph-light m-t-1">{{#str}} password {{/str}}</label>
                         <input type="password" name="password" id="password" value=""
                             class="form-control"
                             placeholder={{#quote}}{{#str}}password{{/str}}{{/quote}}>
@@ -208,7 +208,7 @@
                         <button type="submit" class="btn btn-blue btn-block m-t-1 paragraph-bold" id="loginbtn">{{#str}}login{{/str}}</button>
                     </form>
 
-                    <div class="forgetpass m-t-3">
+                    <div class="forgetpass m-t-2">
                         <p><a href="{{forgotpasswordurl}}">{{#str}}forgotten{{/str}}</a></p>
                     </div>
                 </div>
