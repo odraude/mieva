@@ -2,7 +2,7 @@
 * @Author: Eduardo Camarillo
 * @Date:   2018-03-02 21:45:03
 * @Last Modified by:   odraude
-* @Last Modified time: 2018-04-17 17:08:40
+* @Last Modified time: 2018-04-17 18:58:37
 */
 
 // Post SCSS for the theme.
@@ -52,19 +52,51 @@ body {
     font-family: $font-family-roboto-light;
     font-size: 16px;
 }
+.highlight-blue {
+    font-family: $font-family-roboto-bold;
+    color: $color-blue;
+}
 .highlight-green {
     font-family: $font-family-roboto-bold;
-    color: $text-green;
+    color: $color-green;
 }
 .highlight-orange {
     font-family: $font-family-roboto-bold;
-    color: $text-orange;
+    color: $color-orange;
+}
+.bg-blue {
+    background-color: $color-blue;
 }
 .bg-green {
-    background-color: $text-green;
+    background-color: $color-green;
 }
 .bg-orange {
-    background-color: $text-orange;
+    background-color: $color-orange;
+}
+
+// MiEVA's Buttons
+@mixin button-bg($bg) {
+  color: $color-white;
+  background: $bg;
+  border-color: darken($bg,8%);
+  &:hover {
+    color: $color-white;
+    background:darken($bg,8%);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    color: $color-white;
+    background:darken($bg,15%);
+  } 
+}
+.btn-green {
+   @include button-bg($color-green);
+}
+.btn-blue {
+   @include button-bg($color-blue);
+}
+.btn-orange {
+   @include button-bg($color-orange);
 }
 
 // Overwrite bootstrap breadcrumb separator
@@ -91,4 +123,11 @@ body {
 
 .page-context-header .page-header-image, .page-context-header .page-header-headings {
     float: none;
+}
+
+// Login border
+@media screen and (min-width: map-get($grid-breakpoints, md)) {
+    .border-right {
+        border-right: 0.2em inset gray;
+    }
 }
