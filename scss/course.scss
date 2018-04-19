@@ -32,6 +32,15 @@
                         background-color: $color-blue;
                     }
                 }
+
+                .main {
+                    border: unset;
+                }
+
+                .content {
+                    border: 0.1em solid rgba(128, 128, 128, 0.4) !important;
+                    padding: 1em !important;
+                }
             }
         }
     }
