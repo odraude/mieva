@@ -20,8 +20,8 @@
  * @package    theme_mieva
  * @Author:    Eduardo Camarillo
  * @Date:      2018-03-02 21:47:47
- * @Last Modified by:	Eduardo Camarillo
- * @Last Modified time:	2018-03-06 05:27:44
+ * @Last Modified by:	odraude
+ * @Last Modified time:	2018-04-19 15:50:09
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -82,3 +82,4 @@ $string['rawscsspre_desc'] = 'In this field you can provide initialising SCSS co
 // We need to include a lang string for each block region.
 $string['region-side-pre'] = 'Right';
 $string['sign_in'] = 'Sign in';
+$string['discipline_progress'] = 'Discipline\'s progress';

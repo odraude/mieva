@@ -18,10 +18,10 @@
  * Mi EVA.
  *
  * @package    theme_mieva
- * @Author:    odraude
- * @Date:      2018-04-19 15:50:53
+ * @Author:    Eduardo Camarillo
+ * @Date:      2018-03-06 05:28:47
  * @Last Modified by:	odraude
- * @Last Modified time:	2018-04-19 15:51:07
+ * @Last Modified time:	2018-04-19 15:44:19
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

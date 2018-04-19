@@ -21,7 +21,7 @@
  * @Author:    odraude
  * @Date:      2018-04-18 17:07:01
  * @Last Modified by:	odraude
- * @Last Modified time:	2018-04-19 01:04:30
+ * @Last Modified time:	2018-04-19 15:39:36
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -145,7 +145,7 @@ trait format_renderer_toolbox {
             $output = html_writer::start_tag('div', array('class' => 'section-summary-activities'));
             $output .= html_writer::tag(
                 'span',
-                get_string('discipline_progress', 'theme_moove'),
+                get_string('discipline_progress', 'theme_mieva'),
                 array('class' => 'activity-count')
             );
             $output .= "<div class='progress'>";
