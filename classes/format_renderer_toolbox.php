@@ -21,7 +21,7 @@
  * @Author:    odraude
  * @Date:      2018-04-18 17:07:01
  * @Last Modified by:	odraude
- * @Last Modified time:	2018-04-18 23:24:45
+ * @Last Modified time:	2018-04-19 01:04:30
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -30,6 +30,7 @@ namespace theme_mieva;
 use html_writer;
 use context_course;
 use completion_info;
+use stdClass;
 
 defined('MOODLE_INTERNAL') || die;
 
@@ -80,6 +81,83 @@ trait format_renderer_toolbox {
         $o .= html_writer::end_tag('li');
 
         return $o;
+    }
+
+    /**
+     * Generate a summary of the activites in a section
+     *
+     * @param stdClass $section The course_section entry from DB
+     * @param stdClass $course the course record from DB
+     * @param array    $mods (argument not used)
+     * @return string HTML to output.
+     */
+    protected function section_activity_summary($section, $course, $mods) {
+        $modinfo = get_fast_modinfo($course);
+        if (empty($modinfo->sections[$section->section])) {
+            return '';
+        }
+
+        // Generate array with count of activities in this section.
+        $sectionmods = array();
+        $total = 0;
+        $complete = 0;
+        $cancomplete = isloggedin() && !isguestuser();
+        $completioninfo = new completion_info($course);
+        foreach ($modinfo->sections[$section->section] as $cmid) {
+            $thismod = $modinfo->cms[$cmid];
+
+            if ($thismod->uservisible) {
+                if (isset($sectionmods[$thismod->modname])) {
+                    $sectionmods[$thismod->modname]['name'] = $thismod->modplural;
+                    $sectionmods[$thismod->modname]['count']++;
+                } else {
+                    $sectionmods[$thismod->modname]['name'] = $thismod->modfullname;
+                    $sectionmods[$thismod->modname]['count'] = 1;
+                }
+                if ($cancomplete && $completioninfo->is_enabled($thismod) != COMPLETION_TRACKING_NONE) {
+                    $total++;
+                    $completiondata = $completioninfo->get_data($thismod, true);
+                    if ($completiondata->completionstate == COMPLETION_COMPLETE ||
+                            $completiondata->completionstate == COMPLETION_COMPLETE_PASS) {
+                        $complete++;
+                    }
+                }
+            }
+        }
+
+        if (empty($sectionmods)) {
+            // No sections.
+            return '';
+        }
+
+        // Output section completion data.
+        $output = '';
+        if ($total > 0) {
+            $completion = new stdClass;
+            $completion->complete = $complete;
+            $completion->total = $total;
+
+            $percent = 0;
+            if ($complete > 0) {
+                $percent = (int) (($complete / $total) * 100);
+            }
+
+            $output = html_writer::start_tag('div', array('class' => 'section-summary-activities'));
+            $output .= html_writer::tag(
+                'span',
+                get_string('discipline_progress', 'theme_moove'),
+                array('class' => 'activity-count')
+            );
+            $output .= "<div class='progress'>";
+            $output .= "<div class='progress-bar progress-bar-info' role='progressbar' aria-valuenow='{$percent}' ";
+            $output .= " aria-valuemin='0' aria-valuemax='100' style='width: {$percent}%;'>";
+            $output .= "{$percent}%";
+            $output .= "</div>";
+            $output .= "</div>";
+            $output .= html_writer::end_tag('div');
+        }
+
+        return $output;
     }
 
     /**
