@@ -1,0 +1,19 @@
+/*
+* @Author: odraude
+* @Date:   2018-04-19 20:24:22
+* @Last Modified by:   odraude
+* @Last Modified time: 2018-04-19 21:25:15
+*/
+
+$img-dic: bg-dic-course;
+
+@mixin bg-cover-page ($img) {
+	background-image: url([[pix:theme_mieva|#{$img}]]);
+    background-size: cover;
+    margin-right: inherit;
+    padding: 15px 0px;
+}
+
+.bg-dic-course {
+	@include bg-cover-page($img-dic);
+}
