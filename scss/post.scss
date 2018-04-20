@@ -2,7 +2,7 @@
 * @Author: Eduardo Camarillo
 * @Date:   2018-03-02 21:45:03
 * @Last Modified by:   odraude
-* @Last Modified time: 2018-04-20 15:54:34
+* @Last Modified time: 2018-04-20 16:19:41
 */
 
 // Post SCSS for the theme.
@@ -42,23 +42,23 @@ body {
 }
 .paragraph {
     font-family: $font-family-roboto;
-    font-size: 16px;
+    font-size: 16px !important;
 }
 .paragraph-bold {
     font-family: $font-family-roboto;
-    font-size: 18px;
+    font-size: 18px !important;
 }
 .paragraph-light {
     font-family: $font-family-roboto-light;
-    font-size: 16px;
+    font-size: 16px !important;
 }
 .paragraph-medium {
     font-family: $font-family-roboto-medium;
-    font-size: 16px;
+    font-size: 16px !important;
 }
 .paragraph-thin {
     font-family: $font-family-roboto-thin;
-    font-size: 16px;
+    font-size: 16px !important;
 }
 .highlight-blue {
     font-family: $font-family-roboto-bold;
