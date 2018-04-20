@@ -45,3 +45,11 @@
         }
     }
 }
+
+.content {
+    .summary {
+        .no-overflow {
+            overflow: unset;
+        }
+    }
+}
