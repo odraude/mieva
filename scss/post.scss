@@ -2,7 +2,7 @@
 * @Author: Eduardo Camarillo
 * @Date:   2018-03-02 21:45:03
 * @Last Modified by:   odraude
-* @Last Modified time: 2018-04-20 16:19:41
+* @Last Modified time: 2018-04-23 13:32:44
 */
 
 // Post SCSS for the theme.
@@ -33,7 +33,7 @@ body.pagelayout-print {
 body {
     background-image: url([[pix:theme_mieva|defaultbackgroundimage]]);
     background-size: cover;
-    font-family: $font-family-roboto;
+    font-family: $font-family-roboto !important;
     background-color: #FFF !important;
 }
 
@@ -60,17 +60,25 @@ body {
     font-family: $font-family-roboto-thin;
     font-size: 16px !important;
 }
+.paragraph-medium-eval {
+    font-family: $font-family-roboto-medium;
+    font-size: 24px !important;
+}
 .highlight-blue {
     font-family: $font-family-roboto-bold;
-    color: $color-blue;
+    color: $color-blue !important;
 }
 .highlight-green {
     font-family: $font-family-roboto-bold;
-    color: $color-green;
+    color: $color-green !important;
 }
 .highlight-orange {
     font-family: $font-family-roboto-bold;
-    color: $color-orange;
+    color: $color-orange !important;
+}
+.highlight-orange-eval {
+    font-family: $font-family-roboto-medium;
+    color: $color-orange !important;
 }
 .bg-blue {
     background-color: $color-blue;
@@ -80,6 +88,15 @@ body {
 }
 .bg-orange {
     background-color: $color-orange;
+}
+.text-blue {
+    color: $color-blue;
+}
+.text-green {
+    color: $color-green;
+}
+.text-orange {
+    color: $color-orange;
 }
 
 // MiEVA's Buttons
