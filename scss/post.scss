@@ -1,8 +1,8 @@
 /*
 * @Author: Eduardo Camarillo
 * @Date:   2018-03-02 21:45:03
-* @Last Modified by:   odraude
-* @Last Modified time: 2018-04-23 14:07:20
+* @Last Modified by:   Eduardo Camarillo
+* @Last Modified time: 2018-04-26 13:03:14
 */
 
 // Post SCSS for the theme.
@@ -112,7 +112,10 @@ body {
   &:active {
     color: $color-white;
     background:darken($bg,15%);
-  } 
+  }
+  &:visited {
+    color: $color-white;
+  }
 }
 .btn-green {
    @include button-bg($color-green);
@@ -148,6 +151,7 @@ body {
 
 .page-context-header .page-header-image, .page-context-header .page-header-headings {
     float: none;
+    padding: 0.6em 0;
 }
 
 // Login border
