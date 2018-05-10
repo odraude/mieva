@@ -5,16 +5,97 @@
 * @Last Modified time: 2018-04-23 12:46:35
 */
 
-$img-dic: bg-dic-course;
+$img-dic: 3_m1_informacion_conocimiento_p;
+$img-lrh: 3_m02_lenguaje_relacion_hombre_p;
+$img-rsi: 3_m03_representaciones_simbolicas_p;
+$img-sso: 3_m04_ser_social_p;
+$img-mol: 3_m05_mundo_otra_lengua_p;
+$img-tin: 3_m06_tecnologia_informacion_p;
+$img-tvm: 3_m07_textos_visiones_mundo_p;
+$img-msn: 3_m08_matematicas_sistema_natural_p;
+$img-una: 3_m09_universo_natural_p;
+$img-sme: 3_m10_sociedad_mexicana_p;
+$img-tmu: 3_m11_transformaciones_mundo_p;
+$img-vol: 3_m12_vida_otra_lengua_p;
+$img-arg: 3_m13_argumentacion_p;
+$img-vpr: 3_m14_variacion_procesos_p;
+$img-cfe: 3_m15_calculo_fenomenos_p;
+$img-dsu: 3_m16_desarrollo_sustentable_p;
+$img-ere: 3_m17_evolucion_repercusiones_p;
+$img-efe: 3_m18_estadistica_fenomenos_p;
+$img-dmo: 3_m19_dinamica_movimiento_p;
+$img-osi: 3_m20_optimizacion_sistemas_p;
+$img-ict: 3_m21_impacto_cienciatec_p;
 
 @mixin bg-cover-page ($img) {
-	background-image: url([[pix:theme_mieva|#{$img}]]);
+	background-image: url([[pix:theme_mieva|portadas/#{$img}]]);
     background-size: cover;
     margin-right: inherit;
     margin-bottom: 1.2em;
     padding: 15px 0px;
+    width: 100%;
 }
 
 .bg-dic-course {
 	@include bg-cover-page($img-dic);
+}
+.bg-lrh-course {
+	@include bg-cover-page($img-lrh);
+}
+.bg-rsi-course {
+	@include bg-cover-page($img-rsi);
+}
+.bg-sso-course {
+	@include bg-cover-page($img-sso);
+}
+.bg-mol-course {
+	@include bg-cover-page($img-mol);
+}
+.bg-tin-course {
+	@include bg-cover-page($img-tin);
+}
+.bg-tvm-course {
+	@include bg-cover-page($img-tvm);
+}
+.bg-msn-course {
+	@include bg-cover-page($img-msn);
+}
+.bg-una-course {
+	@include bg-cover-page($img-una);
+}
+.bg-sme-course {
+	@include bg-cover-page($img-sme);
+}
+.bg-tmu-course {
+	@include bg-cover-page($img-tmu);
+}
+.bg-vol-course {
+	@include bg-cover-page($img-vol);
+}
+.bg-arg-course {
+	@include bg-cover-page($img-arg);
+}
+.bg-vpr-course {
+	@include bg-cover-page($img-vpr);
+}
+.bg-cfe-course {
+	@include bg-cover-page($img-cfe);
+}
+.bg-dsu-course {
+	@include bg-cover-page($img-dsu);
+}
+.bg-ere-course {
+	@include bg-cover-page($img-ere);
+}
+.bg-efe-course {
+	@include bg-cover-page($img-efe);
+}
+.bg-dmo-course {
+	@include bg-cover-page($img-dmo);
+}
+.bg-osi-course {
+	@include bg-cover-page($img-osi);
+}
+.bg-ict-course {
+	@include bg-cover-page($img-ict);
 }
