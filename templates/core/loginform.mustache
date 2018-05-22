@@ -133,7 +133,7 @@
             </div>
             <!-- IdP -->
             <div class="row">
-                <div class="col-md-8 push-md-2">
+                <div class="col-md-8 offset-md-2">
                     {{#hasidentityproviders}}
                         <div class="potentialidplist" class="m-t-1">
                             {{#identityproviders}}
@@ -152,11 +152,13 @@
             </div>
             <!-- Institutional account help -->
             <div class="row">
-                <div class="col-md-8 push-md-2 m-t-3 paragraph-bold">
+                <div class="col-md-8 offset-md-2 m-t-3 paragraph-bold">
                     <p>¿Aún no tienes tu <span class="highlight-green">cuenta institucional</span>?</p>
                     <p><a class="btn btn-green btn-block m-t-2 paragraph-bold" target="_blank" href="#">Solicítala</a></p>
                 </div>
-                <div class="col-md-8 push-md-2 m-t-2">
+            </div>
+            <div class="row">
+                <div class="col-md-6 offset-md-2 m-t-2">
                     <p><a href="#">Recuperar Contraseña</a></p>
                 </div>
                 <div class="col-md-4 m-t-2">
@@ -168,15 +170,15 @@
         <!-- Management personal -->
         <div class="col-md-6">
             <div class="row">
-                <div class="col-md-8 push-md-2 m-y-3 paragraph-title">
+                <div class="col-md-8 offset-md-2 m-y-3 paragraph-title">
                     <h3>Personal administrativo</h3>
                 </div>
-                <div class="col-md-8 push-md-2 paragraph">
+                <div class="col-md-8 offset-md-2 paragraph">
                     <p><span class="highlight-blue">Ingresa</span> con tus datos de usuario.</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-8 push-md-2">
+                <div class="col-md-8 offset-md-2">
                     <form action="{{loginurl}}" method="post" id="login">
                         <input id="anchor" type="hidden" name="anchor" value="">
                         <script>document.getElementById('anchor').value = location.hash;</script>
@@ -219,7 +221,7 @@
 
 {{#hasinstructions}}
 <div class="row">
-<div class="col-xl-6 push-xl-3 m-2-md col-sm-8 push-sm-2">
+<div class="col-xl-6 offset-xl-3 m-2-md col-sm-8 offset-sm-2">
 <div class="card">
     <div class="card-block">
         <div class="card-title">
