@@ -48,14 +48,7 @@
         "hasregionmainsettingsmenu": false
     }
 }}
-{{{ output.doctype }}}
-<html {{{ output.htmlattributes }}}>
-<head>
-    <title>{{{ output.page_title }}}</title>
-    <link rel="shortcut icon" href="{{{ output.favicon }}}" />
-    {{{ output.standard_head_html }}}
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-</head>
+{{> theme_mieva/head }}
 
 <body {{{ bodyattributes }}}>
 
@@ -70,25 +63,27 @@
         {{{ output.full_header }}}
 
         <div id="page-content" class="row">
-            <div id="region-main-box" class="col-xs-12">
+            <div id="region-main-box" class="col-12">
                 {{#hasregionmainsettingsmenu}}
-                <div id="region-main-settings-menu" class="hidden-print {{#hasblocks}}has-blocks{{/hasblocks}}">
+                <div id="region-main-settings-menu" class="d-print-none {{#hasblocks}}has-blocks{{/hasblocks}}">
                     <div> {{{ output.region_main_settings_menu }}} </div>
                 </div>
                 {{/hasregionmainsettingsmenu}}
-                <section id="region-main" {{#hasblocks}}class="has-blocks"{{/hasblocks}}>
-
-                    {{#hasregionmainsettingsmenu}}
-                        <div class="region_main_settings_menu_proxy"></div>
-                    {{/hasregionmainsettingsmenu}}
-                    {{{ output.course_content_header }}}
-                    {{{ output.main_content }}}
-                    {{{ output.activity_navigation }}}
-                    {{{ output.course_content_footer }}}
-
+                <section id="region-main" {{#hasblocks}}class="has-blocks mb-3"{{/hasblocks}}>
+                    <div class="card">
+                        <div class="card-body">
+                            {{#hasregionmainsettingsmenu}}
+                                <div class="region_main_settings_menu_proxy"></div>
+                            {{/hasregionmainsettingsmenu}}
+                            {{{ output.course_content_header }}}
+                            {{{ output.main_content }}}
+                            {{{ output.activity_navigation }}}
+                            {{{ output.course_content_footer }}}
+                        </div>
+                    </div>
                 </section>
                 {{#hasblocks}}
-                <section data-region="blocks-column" class="hidden-print">
+                <section data-region="blocks-column" class="d-print-none">
                     {{{ sidepreblocks }}}
                 </section>
                 {{/hasblocks}}
@@ -97,9 +92,11 @@
     </div>
     {{> theme_boost/nav-drawer }}
 </div>
+
 {{>theme_mieva/footer}}
+
 <script type="text/javascript">function toggleFunction(e) { var x = e.parentNode.parentNode; if (! x.className.includes("responsive")){ x.className += " responsive"; } else { res = x.className.split(" "); x.className = res[0] + " " + res[1]; } }</script>
-{{{ output.standard_end_of_body_html }}}
+
 </body>
 </html>
 {{#js}}

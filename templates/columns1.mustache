@@ -36,14 +36,7 @@
          "bodyattributes":""
     }
 }}
-{{{ output.doctype }}}
-<html {{{ output.htmlattributes }}}>
-<head>
-    <title>{{{ output.page_title }}}</title>
-    <link rel="shortcut icon" href="{{{ output.favicon }}}" />
-    {{{ output.standard_head_html }}}
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-</head>
+{{> theme_mieva/head }}
 
 <body {{{ bodyattributes }}}>
 
@@ -56,22 +49,24 @@
 
     <div id="page" class="container-fluid">
         <div id="page-content" class="row">
-            <div id="region-main-box" class="col-xs-12">
+            <div id="region-main-box" class="col-12">
                 <section id="region-main">
-
-                    {{{ output.course_content_header }}}
-                    {{{ output.main_content }}}
-                    {{{ output.activity_navigation }}}
-                    {{{ output.course_content_footer }}}
-
+                    <div class="card">
+                        <div class="card-body">
+                            {{{ output.course_content_header }}}
+                            {{{ output.main_content }}}
+                            {{{ output.activity_navigation }}}
+                            {{{ output.course_content_footer }}}
+                        </div>
+                    </div>
                 </section>
             </div>
         </div>
     </div>
 </div>
+{{{ output.standard_end_of_body_html }}}
 {{>theme_mieva/footer}}
 <script type="text/javascript">function toggleFunction(e) { var x = e.parentNode.parentNode; if (! x.className.includes("responsive")){ x.className += " responsive"; } else { res = x.className.split(" "); x.className = res[0] + " " + res[1]; } }</script>
-{{{ output.standard_end_of_body_html }}}
 </body>
 </html>
 {{#js}}
