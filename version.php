@@ -21,7 +21,7 @@
  * @Author:    Eduardo Camarillo
  * @Date:      2018-03-02 21:29:59
  * @Last Modified by:	Eduardo Camarillo
- * @Last Modified time:	2018-03-02 21:33:32
+ * @Last Modified time:	2018-05-22 14:46:53
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -30,13 +30,13 @@ defined('MOODLE_INTERNAL') || die();
 // This is the version of the plugin.
 $plugin->version = 2018030200;
 // This is the version of Moodle this plugin requires.
-$plugin->requires = 2016112900.00;
+$plugin->requires = 2018051700;
 // This is the component name of the plugin - it always starts with 'theme_'
 // for themes and should be the same as the name of the folder.
 $plugin->component = 'theme_mieva';
 // This is a list of plugins, this plugin depends on (and their versions).
 $plugin->dependencies = [
-    'theme_boost' => 2016102100
+    'theme_boost' => 2018051400
 ];
 // This is a stable release.
 $plugin->maturity = MATURITY_STABLE;
