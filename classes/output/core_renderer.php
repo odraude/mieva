@@ -84,7 +84,7 @@ class core_renderer extends \core_renderer {
             
             $html .= html_writer::end_div();
             $html .= html_writer::start_div('row');
-            $html .= html_writer::start_div('col-md-6 push-md-3 text-md-center text-xs-center');
+            $html .= html_writer::start_div('col-md-8 offset-md-2 text-md-center text-xs-center');
             $html .= html_writer::div($this->context_header_settings_menu(), 'pull-xs-right context-header-settings-menu');
             $html .= $this->context_header_course();
             $html .= html_writer::start_tag('hr');
