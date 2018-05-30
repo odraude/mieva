@@ -100,6 +100,6 @@ $img-inf: 3_m22_informatica;
 .bg-ict-course {
 	@include bg-cover-page($img-ict);
 }
-.bg.inf-course {
+.bg-inf-course {
 	@include bg-cover-page($img-inf);
 }
