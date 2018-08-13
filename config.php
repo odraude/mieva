@@ -21,7 +21,7 @@
  * @Author:    Eduardo Camarillo
  * @Date:      2018-03-02 21:42:06
  * @Last Modified by:	Eduardo Camarillo
- * @Last Modified time:	2018-03-02 21:43:13
+ * @Last Modified time:	2018-08-12 22:00:54
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -64,3 +64,35 @@ $THEME->addblockposition = BLOCK_ADDBLOCK_POSITION_FLATNAV;
 $THEME->scss = function($theme) {
     return theme_mieva_get_main_scss_content($theme);
 };
+// Layout
+$THEME->layouts = [
+// Most backwards compatible layout without the blocks - this is the layout used by default.
+    'base' => array(
+        'file' => 'columns2.php',
+        'regions' => array(),
+    ),
+    // Standard layout with blocks, this is recommended for most pages with general information.
+    'standard' => array(
+        'file' => 'columns2.php',
+        'regions' => array('side-pre', 'side-cover'),
+        'defaultregion' => 'side-cover',
+    ),
+    // Main course page.
+    'course' => array(
+        'file' => 'columns2.php',
+        'regions' => array('side-pre', 'side-cover'),
+        'defaultregion' => 'side-cover',
+        'options' => array('langmenu' => true),
+    ),
+    'coursecategory' => array(
+        'file' => 'columns2.php',
+        'regions' => array('side-pre', 'side-cover'),
+        'defaultregion' => 'side-cover',
+    ),
+    // Part of course, typical for modules - default page layout if $cm specified in require_login().
+    'incourse' => array(
+        'file' => 'columns2.php',
+        'regions' => array('side-pre', 'side-cover'),
+        'defaultregion' => 'side-cover',
+    )
+];

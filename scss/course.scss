@@ -2,7 +2,7 @@
 * @Author: Eduardo Camarillo
 * @Date:   2018-03-02 21:45:03
 * @Last Modified by:   Eduardo Camarillo
-* @Last Modified time: 2018-05-22 14:16:49
+* @Last Modified time: 2018-08-13 02:28:09
 */
 
 // Course SCSS for the theme.
@@ -61,4 +61,56 @@
             overflow: unset;
         }
     }
+}
+
+// Cover page for courses
+#cover-page {
+    margin-top: -33px;
+
+    .card {
+        border: none;
+
+        .card-body {
+            padding: 0rem;
+
+            .content {
+                margin-top: 0rem !important;
+            }
+        }
+
+        .footer {
+            margin-top: 0rem;
+            border: none;
+        }
+    }
+}
+
+// Advisor photograph
+.advisor {
+    background-color: #7398e2;
+    border-radius: 50%;
+}
+
+.divider{
+    position:absolute;
+    left:30%;
+    top:10%;
+    bottom:10%;
+    border-left:2px solid #9d9d9d;
+}
+
+// Horizontal rule
+hr {
+    height: 0.1em;
+    background-color: #cfcfcf;
+}
+.hr-title::after {
+    margin-left: 45%;
+    top: -0.7em;
+    position: relative;
+    display: inline-block;
+    background-color: $color-orange;
+    height: 13px;
+    content: " ";
+    padding: 0 5%;
 }

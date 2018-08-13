@@ -60,7 +60,14 @@
     {{>theme_mieva/navbar}}
 
     <div id="page" class="container">
+
         {{{ output.full_header }}}
+
+        {{#hascoverblocks}}
+            <section id="cover-page" data-region="blocks-row" class="d-print-none">
+                {{{ sidecoverblocks }}}
+            </section>
+        {{/hascoverblocks}}
 
         <div id="page-content" class="row">
             <div id="region-main-box" class="col-12">
