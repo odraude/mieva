@@ -63,6 +63,11 @@
     }
 }
 
+// Titles role main
+div[role="main"] h2 {
+    text-align: center;
+}
+
 // Cover page for courses
 #cover-page {
     margin-top: -33px;
@@ -113,4 +118,213 @@ hr {
     height: 13px;
     content: " ";
     padding: 0 5%;
+}
+
+// Background colors for activity notes
+$col-pistache: #ecf2df;
+$col-mamey: #faeae7;
+$col-azul: #e3eaf9;
+$col-fa-azul: #3e6fd8;
+$col-fa-naranja: #de6c56;
+$col-fa-gris: #9d9d9d;
+$col-fa-verde: #557616;
+$col-verde: #ecf2df;
+$col-fa-rojo: #7f3e31;
+
+// Acivity notes
+.row.proposito {
+    background: $col-pistache;
+    font-family: $font-family-roboto-medium;
+    font-size: 18px;
+    margin-left: -2.2em;
+    padding-bottom: 0.5em;
+    padding-left: 0.9em;
+    padding-top: 0.5em;
+    .fa {
+        margin-top: 0.2em;
+        margin-right: 0.4em;
+        color: $col-fa-azul;
+    }
+}
+
+.row.actividades {
+    background: $col-azul;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 100%;
+    font-family: $font-family-roboto-medium;
+    font-size: 18px;
+    padding-bottom: 0.5em;
+    padding-left: 1.3em;
+    padding-top: 0.5em;
+    .fa {
+        margin-top: 0.2em;
+        margin-right: 0.4em;
+        color: $col-fa-azul;
+    }
+}
+
+.row.recursos {
+    background: $col-azul;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 100%;
+    font-family: $font-family-roboto-medium;
+    font-size: 18px;
+    padding-bottom: 0.5em;
+    padding-left: 1.3em;
+    padding-top: 0.5em;
+    .fa {
+        margin-top: 0.2em;
+        margin-right: 0.4em;
+        color: $col-fa-azul;
+    }
+}
+
+.row.evaluacion {
+    background: $col-mamey;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 100%;
+    font-family: $font-family-roboto-medium;
+    font-size: 18px;
+    padding-bottom: 0.5em;
+    padding-left: 1.3em;
+    padding-top: 0.5em;
+    .fa {
+        margin-top: 0.2em;
+        margin-right: 0.4em;
+        color: $col-fa-naranja;
+    }
+}
+
+ul.actividades {
+    list-style: none;
+    padding: 1em;
+    li {
+        font-family: $font-family-roboto-medium;
+        &:before {
+            content: "•";
+            color: $col-fa-naranja;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em
+        }
+    }
+}
+
+.row.desc-actividad {
+    width: 100%;
+    margin-top: 2em;
+    margin-bottom: 5em;
+    span.fa-stack {
+        color: $col-fa-gris;
+    }
+
+    h3 {
+        font-family: $font-family-roboto-light;
+    }
+
+    ul {
+        list-style: none;
+        li {
+            font-family: $font-family-roboto-medium;
+            &:before {
+                content: "•";
+                color: $col-fa-naranja;
+                display: inline-block;
+                width: 1em;
+                margin-left: -1em
+            }
+        }
+    }
+
+    .separador {
+        position: absolute;
+        left: 50%;
+        top: 10%;
+        bottom: 82%;
+        border-left: 2px solid $col-fa-gris;
+    }
+}
+
+.row.debo-hacer {
+    width: 100%;
+    margin-left: 0em;
+    padding-top: 0.5em;
+    padding-left: 0.7em;
+    border-top: 1em solid $col-azul;
+    color: $col-fa-azul;
+    font-size: 16px;
+    font-family: $font-family-roboto-light !important;
+}
+
+.row.otros-recursos {
+    width: 100%;
+    padding: 1em;
+    border: 1px solid $col-fa-azul;
+    margin: 1.5em 0em;
+    .fa {
+        color: $col-fa-azul;
+    }
+}
+
+.row.entregables {
+    width: 100%;
+    padding: 0em;
+    margin: 1.5em 0em;
+    .fa-stack {
+        color: $col-fa-verde;
+    }
+    .title {
+        font-size: 18px;
+        font-family: $font-family-roboto-light;
+        color: #383838;
+    }
+    .fondo-lista-verde {
+        background-color: $col-verde;
+    }
+}
+
+.row.rubrica-evaluacion {
+    width: 100%;
+    padding: 0em;
+    margin: 1.5em 0em;
+    .fa-stack {
+        color: $col-fa-rojo;
+    }
+    .title {
+        font-size: 18px;
+        font-family: $font-family-roboto-light;
+        color: #383838;
+    }
+    .fondo-lista-rojo {
+        background-color: $col-mamey;
+        padding: 1em;
+    }
+}
+
+.row.referencias {
+    width: 100%;
+    padding: 0em;
+    margin: 1.5em 0em;
+    .fa-stack {
+        color: $col-fa-azul;
+    }
+    .title {
+        font-size: 18px;
+        font-family: $font-family-roboto-light;
+        color: #383838;
+    }
+    .fondo-lista-azul {
+        background-color: $col-azul;
+        padding: 1em;
+    }
+}
+
+.row.fin-actividad {
+    border-bottom: 1em solid $col-azul;
+    width: 100%;
+    margin-top: 4em;
+    margin-left: 0em;
 }
