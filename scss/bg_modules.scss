@@ -2,7 +2,7 @@
 * @Author: odraude
 * @Date:   2018-04-19 20:24:22
 * @Last Modified by:   Eduardo Camarillo
-* @Last Modified time: 2018-09-01 14:42:43
+* @Last Modified time: 2018-09-01 14:54:00
 */
 
 $img-dic: 3_m1_informacion_conocimiento_p;
@@ -32,9 +32,11 @@ $img-inf: 3_m22_informatica;
 	background-image: url([[pix:theme_mieva|portadas/#{$img}]]);
     background-size: cover;
     margin-right: inherit;
+    margin-left: 0px;
     margin-bottom: 1.2em;
     padding: 15px 0px;
-    width: 103% !important;
+    width: 100%;
+    height: 180px;
 }
 
 .bg-dic-course {
