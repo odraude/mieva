@@ -73,8 +73,9 @@ class core_renderer extends \core_renderer {
     public function full_header() {
         global $PAGE;
 
-        if ($PAGE->pagelayout == 'course' || $PAGE->pagelayout == 'coursecategory' 
-            || $PAGE->pagelayout == 'incourse' || $PAGE->pagelayout == 'standard') {
+        /*if ($PAGE->pagelayout == 'course' || $PAGE->pagelayout == 'coursecategory' 
+            || $PAGE->pagelayout == 'incourse' || $PAGE->pagelayout == 'standard' || $PAGE->pagelayout == 'coursecategory') {*/
+        if ($PAGE->pagelayout == 'course' || $PAGE->pagelayout == 'standard') {
             $html = html_writer::start_div('row');
             $html .= html_writer::start_div('col-md-12');
             $html .= html_writer::start_div('clearfix w-100 pull-xs-left', array('id' => 'page-navbar'));
