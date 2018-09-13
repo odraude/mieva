@@ -110,8 +110,8 @@ class core_renderer extends \core_renderer {
             $html .= html_writer::start_div('card');
             $html .= html_writer::start_div('card-block');
             $html .= html_writer::div($this->context_header_settings_menu(), 'pull-xs-right context-header-settings-menu');
-            $html .= html_writer::start_div('pull-xs-left');
-            $html .= $this->context_header();
+            $html .= html_writer::start_div('pull-xs-left col-md-12 bg-mieva-navbar');
+            $html .= $this->context_header(null, 2);
             $html .= html_writer::end_div();
             $pageheadingbutton = $this->page_heading_button();
             if (empty($PAGE->layout_options['nonavbar'])) {
