@@ -127,6 +127,7 @@ class core_renderer extends \core_renderer {
             $html .= html_writer::end_div();
             $html .= html_writer::end_div();
             $html .= html_writer::end_tag('header');
+            $html .= html_writer::start_tag('br');
         }
 
         return $html;
