@@ -20,8 +20,8 @@
  * @package    theme_mieva
  * @Author:    Eduardo Camarillo
  * @Date:      2018-03-02 21:34:11
- * @Last Modified by:	Eduardo Camarillo
- * @Last Modified time:	2018-03-02 21:38:30
+ * @Last Modified by:	eduardo.camarillo
+ * @Last Modified time:	2019-01-07 23:32:36
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -126,6 +126,138 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_configstoredfile($name, $title, $description, 'incoursebackgroundimage');
     // This function will copy the image into the data_root location it can be served from.
     $setting->set_updatedcallback('theme_mieva_update_settings_images');
+    // We always have to add the setting to a page for it to have any effect.
+    $page->add($setting);
+    // Must add the page after defining all the settings!
+    $settings->add($page);
+    // Links
+    $page = new admin_settingpage('theme_mieva_links', get_string('links', 'theme_mieva'));
+    // SEP Link
+    $name = 'theme_mieva/seplogolink';
+    $title = get_string('seplogolink', 'theme_mieva');
+    $description = get_string('seplogolink_desc', 'theme_mieva');
+    $setting = new admin_setting_configtext($name, $title, $description, 'https://www.gob.mx/sep');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    // PA Link
+    $name = 'theme_mieva/palogolink';
+    $title = get_string('palogolink', 'theme_mieva');
+    $description = get_string('palogolink_desc', 'theme_mieva');
+    $setting = new admin_setting_configtext($name, $title, $description, 'https://www.prepaabierta.sep.gob.mx/');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    // MiEVA homepage link
+    $name = 'theme_mieva/mievahomepagelink';
+    $title = get_string('mievahomepagelink', 'theme_mieva');
+    $description = get_string('mievahomepagelink_desc', 'theme_mieva');
+    $setting = new admin_setting_configtext($name, $title, $description, 'https://mievaprepaabierta.sep.gob.mx/');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    // MiEVA institutional account link
+    $name = 'theme_mieva/mievainstaccountlink';
+    $title = get_string('mievainstaccountlink', 'theme_mieva');
+    $description = get_string('mievainstaccountlink_desc', 'theme_mieva');
+    $setting = new admin_setting_configtext($name, $title, $description, '#');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    // MiEVA recover password link
+    $name = 'theme_mieva/mievarecoverpasswordlink';
+    $title = get_string('mievarecoverpasswordlink', 'theme_mieva');
+    $description = get_string('mievarecoverpasswordlink_desc', 'theme_mieva');
+    $setting = new admin_setting_configtext($name, $title, $description, '#');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    // MiEVA what is the EVA? link
+    $name = 'theme_mieva/mievawhatisitlink';
+    $title = get_string('mievawhatisitlink', 'theme_mieva');
+    $description = get_string('mievawhatisitlink_desc', 'theme_mieva');
+    $setting = new admin_setting_configtext($name, $title, $description, '#');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    // MiEVA certify subjects link
+    $name = 'theme_mieva/mievacertifylink';
+    $title = get_string('mievacertifylink', 'theme_mieva');
+    $description = get_string('mievacertifylink_desc', 'theme_mieva');
+    $setting = new admin_setting_configtext($name, $title, $description, '#');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    // MiEVA How do I certify? link
+    $name = 'theme_mieva/mievamycertifylink';
+    $title = get_string('mievamycertifylink', 'theme_mieva');
+    $description = get_string('mievamycertifylink_desc', 'theme_mieva');
+    $setting = new admin_setting_configtext($name, $title, $description, '#');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    // MiEVA Centers' location link
+    $name = 'theme_mieva/mievacenterslocationlink';
+    $title = get_string('mievacenterslocationlink', 'theme_mieva');
+    $description = get_string('mievacenterslocationlink_desc', 'theme_mieva');
+    $setting = new admin_setting_configtext($name, $title, $description, '#');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    // MiEVA Learning modules link
+    $name = 'theme_mieva/mievalearningmoduleslink';
+    $title = get_string('mievalearningmoduleslink', 'theme_mieva');
+    $description = get_string('mievalearningmoduleslink_desc', 'theme_mieva');
+    $setting = new admin_setting_configtext($name, $title, $description, '#');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    // MiEVA Subjects link
+    $name = 'theme_mieva/mievasubjectslink';
+    $title = get_string('mievasubjectslink', 'theme_mieva');
+    $description = get_string('mievasubjectslink_desc', 'theme_mieva');
+    $setting = new admin_setting_configtext($name, $title, $description, '#');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    // MiEVA Contact link
+    $name = 'theme_mieva/mievacontactlink';
+    $title = get_string('mievacontactlink', 'theme_mieva');
+    $description = get_string('mievacontactlink_desc', 'theme_mieva');
+    $setting = new admin_setting_configtext($name, $title, $description, '#');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    // MiEVA Contact email link
+    $name = 'theme_mieva/mievacontactemaillink';
+    $title = get_string('mievacontactemaillink', 'theme_mieva');
+    $description = get_string('mievacontactemaillink_desc', 'theme_mieva');
+    $setting = new admin_setting_configtext($name, $title, $description, 'evaprepaabierta@dgb.sems.gob.mx');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    // MiEVA Site map link
+    $name = 'theme_mieva/mievasitemaplink';
+    $title = get_string('mievasitemaplink', 'theme_mieva');
+    $description = get_string('mievasitemaplink_desc', 'theme_mieva');
+    $setting = new admin_setting_configtext($name, $title, $description, '#');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    // MiEVA Privacy policies link page
+    $name = 'theme_mieva/mievaprivacypolicieslink';
+    $title = get_string('mievaprivacypolicieslink', 'theme_mieva');
+    $description = get_string('mievaprivacypolicieslink_desc', 'theme_mieva');
+    $setting = new admin_setting_configtext($name, $title, $description, '#');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    // MiEVA Credits link
+    $name = 'theme_mieva/mievacreditslink';
+    $title = get_string('mievacreditslink', 'theme_mieva');
+    $description = get_string('mievacreditslink_desc', 'theme_mieva');
+    $setting = new admin_setting_configtext($name, $title, $description, '#');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    // MiEVA Frequent questions link
+    $name = 'theme_mieva/mievafrequentquestionslink';
+    $title = get_string('mievafrequentquestionslink', 'theme_mieva');
+    $description = get_string('mievafrequentquestionslink_desc', 'theme_mieva');
+    $setting = new admin_setting_configtext($name, $title, $description, '#');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    // MiEVA help link
+    $name = 'theme_mieva/mievahelplink';
+    $title = get_string('mievahelplink', 'theme_mieva');
+    $description = get_string('mievahelplink_desc', 'theme_mieva');
+    $setting = new admin_setting_configtext($name, $title, $description, '#');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
     // We always have to add the setting to a page for it to have any effect.
     $page->add($setting);
     // Must add the page after defining all the settings!

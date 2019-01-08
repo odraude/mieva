@@ -45,6 +45,27 @@ $hasblocks = strpos($blockshtml, 'data-block=') !== false;
 $coverblockshtml = $OUTPUT->blocks('side-cover');
 $hascoverblocks = strpos($coverblockshtml, 'data-block=') !== false;
 $regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
+$links = [
+    'seplogolink' => get_config('theme_mieva', 'seplogolink'),
+    'palogolink' => get_config('theme_mieva', 'palogolink'),
+    'mievahomepagelink' => get_config('theme_mieva', 'mievahomepagelink'),
+    'mievainstaccountlink' => get_config('theme_mieva', 'mievainstaccountlink'),
+    'mievarecoverpasswordlink' => get_config('theme_mieva', 'mievarecoverpasswordlink'),
+    'mievawhatisitlink' => get_config('theme_mieva', 'mievawhatisitlink'),
+    'mievacertifylink' => get_config('theme_mieva', 'mievacertifylink'),
+    'mievamycertifylink' => get_config('theme_mieva', 'mievamycertifylink'),
+    'mievacenterslocationlink' => get_config('theme_mieva', 'mievacenterslocationlink'),
+    'mievalearningmoduleslink' => get_config('theme_mieva', 'mievalearningmoduleslink'),
+    'mievasubjectslink' => get_config('theme_mieva', 'mievasubjectslink'),
+    'mievacontactlink' => get_config('theme_mieva', 'mievacontactlink'),
+    'mievacontactemaillink' => get_config('theme_mieva', 'mievacontactemaillink'),
+    'mievasitemaplink' => get_config('theme_mieva', 'mievasitemaplink'),
+    'mievaprivacypolicieslink' => get_config('theme_mieva', 'mievaprivacypolicieslink'),
+    'mievacreditslink' => get_config('theme_mieva', 'mievacreditslink'),
+    'mievafrequentquestionslink' => get_config('theme_mieva', 'mievafrequentquestionslink'),
+    'mievahelplink' => get_config('theme_mieva', 'mievahelplink')
+];
+
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
@@ -56,7 +77,8 @@ $templatecontext = [
     'navdraweropen' => $navdraweropen,
     'regionmainsettingsmenu' => $regionmainsettingsmenu,
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
-    'logo_sep' => $OUTPUT->image_url('LogoSep', 'theme')
+    'logo_sep' => $OUTPUT->image_url('LogoSep', 'theme'),
+    'links' => $links
 ];
 
 $templatecontext['flatnavigation'] = $PAGE->flatnav;

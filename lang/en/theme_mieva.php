@@ -20,8 +20,8 @@
  * @package    theme_mieva
  * @Author:    Eduardo Camarillo
  * @Date:      2018-03-02 21:47:47
- * @Last Modified by:	Eduardo Camarillo
- * @Last Modified time:	2018-08-12 22:04:42
+ * @Last Modified by:	eduardo.camarillo
+ * @Last Modified time:	2019-01-07 23:45:16
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -84,3 +84,77 @@ $string['region-side-pre'] = 'Right';
 $string['region-side-cover'] = 'Course Cover Page';
 $string['sign_in'] = 'Sign in';
 $string['discipline_progress'] = 'Discipline\'s progress';
+// Links settings
+$string['links'] = 'Links';
+// SEP logo link
+$string['seplogolink'] = 'SEP link';
+// SEP logo link description
+$string['seplogolink_desc'] = 'Header and footer link to the Secretariat of Public Education';
+// PA logo link
+$string['palogolink'] = 'PA link';
+// PA logo link description
+$string['palogolink_desc'] = 'Header link to the Preparatoria Abierta';
+// MiEVA home page link
+$string['mievahomepagelink'] = 'MiEVA homepage';
+// MiEVA home page link description
+$string['mievahomepagelink_desc'] = 'MiEVA homepage';
+// MiEVA institutional account link
+$string['mievainstaccountlink'] = 'Institutional account';
+// MiEVA institutional account link description
+$string['mievainstaccountlink_desc'] = 'Institutional account link';
+// MiEVA recover password link
+$string['mievarecoverpasswordlink'] = 'Recover password';
+// MiEVA recover password link description
+$string['mievarecoverpasswordlink_desc'] = 'Recover password link';
+// MiEVA what is the EVA? link
+$string['mievawhatisitlink'] = 'What is the EVA?';
+// MiEVA what is the EVA? link description
+$string['mievawhatisitlink_desc'] = 'Link to the page What is the EVA?';
+// MiEVA certify subjects link
+$string['mievacertifylink'] = 'How do I certify the subjects?';
+// MiEVA certify subjects link description
+$string['mievacertifylink_desc'] = 'Link to the page How do I certify the subjects?';
+// MiEVA how do I certify? link
+$string['mievamycertifylink'] = 'How do I certify?';
+// MiEVA how do I certify? link description
+$string['mievamycertifylink_desc'] = 'Link to the page How do I certify?';
+// MiEVA Centers' location link
+$string['mievacenterslocationlink'] = 'Centers\' location';
+// MiEVA Centers' location link description
+$string['mievacenterslocationlink_desc'] = 'Link to the Centers\' location page';
+// MiEVA Learning modules page link
+$string['mievalearningmoduleslink'] = 'Learning modules';
+// MiEVA Learning modules page link description
+$string['mievalearningmoduleslink_desc'] = 'Link to the Learning modules page';
+// MiEVA Subjects page link
+$string['mievasubjectslink'] = 'Subjects';
+// MiEVA Subjects page link description
+$string['mievasubjectslink_desc'] = 'Link to the Subjects page';
+// MiEVA Contact page link
+$string['mievacontactlink'] = 'Contact page';
+// MiEVA Contact page link description
+$string['mievacontactlink_desc'] = 'Link to the Contact page';
+// MiEVA Contact email link
+$string['mievacontactemaillink'] = 'Contact Email';
+// MiEVA Contact email link description
+$string['mievacontactemaillink_desc'] = 'Contact email link';
+// MiEVA Site map link page
+$string['mievasitemaplink'] = 'Site Map';
+// MiEVA Site map link page description
+$string['mievasitemaplink_desc'] = 'Link to the Site Map page';
+// MiEVA Privacy policies link page
+$string['mievaprivacypolicieslink'] = 'Privacy Policies';
+// MiEVA Privacy policies link page description
+$string['mievaprivacypolicieslink_desc'] = 'Link to the Privacy Policies page';
+// MiEVA Credits link
+$string['mievacreditslink'] = 'Credits';
+// MiEVA Credits link desctiption
+$string['mievacreditslink_desc'] = 'Link to the Credits page';
+// MiEVA Frequent Questions link
+$string['mievafrequentquestionslink'] = 'Frequent Questions';
+// MiEVA Frequent Questions link description
+$string['mievafrequentquestionslink_desc'] = 'Link to the Frequent Questions page';
+// MiEVA Help link
+$string['mievahelplink'] = 'Help';
+// MiEVA Help link description
+$string['mievahelplink_desc'] = 'Link to the Help page';

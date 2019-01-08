@@ -20,15 +20,15 @@
  * @package    theme_mieva
  * @Author:    Eduardo Camarillo
  * @Date:      2018-03-02 21:29:59
- * @Last Modified by:	Eduardo Camarillo
- * @Last Modified time:	2018-05-22 14:46:53
+ * @Last Modified by:	eduardo.camarillo
+ * @Last Modified time:	2019-01-08 00:22:39
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 // This line protects the file from being accessed by a URL directly.
 defined('MOODLE_INTERNAL') || die();
 // This is the version of the plugin.
-$plugin->version = 2018030200;
+$plugin->version = 2019010800;
 // This is the version of Moodle this plugin requires.
 $plugin->requires = 2018051700;
 // This is the component name of the plugin - it always starts with 'theme_'
@@ -41,4 +41,4 @@ $plugin->dependencies = [
 // This is a stable release.
 $plugin->maturity = MATURITY_STABLE;
 // This is the named version.
-$plugin->release = 1.0;
+$plugin->release = 1.1;
